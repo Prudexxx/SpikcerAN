@@ -38,7 +38,7 @@
   }
 
   input[type="text"],
-  input[type="tel"] {
+  input[type="number"] {
     padding: 10px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
@@ -81,14 +81,24 @@
     <input type="text" id="name" name="name" placeholder="Назар Б" required maxlength="12" />
 
     <label for="phone">Номер спикерской</label>
-    <input type="tel" id="phone" name="phone" placeholder="Введите номер" required />
+    <input type="number" id="phone" name="phone" placeholder="Введите номер"  required />
 
-    <button type="submit">Отправить</button>
+    <button type="submit" id="submitBtn">Отправить</button>
   </form>
   <p id="status"></p>
 </div>
 
 <script>
+  document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Предотвращаем стандартную отправку формы
+
+    // Здесь можно добавить код для отправки данных, например, через AJAX
+
+    // После успешной отправки:
+    document.getElementById('status').textContent = 'Форма успешно отправлена!';
+    document.getElementById('submitBtn').disabled = true; // блокируем кнопку
+  });
+
   document.getElementById('name').addEventListener('input', function() {
     // Оставляем только буквы и пробелы
     this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё ]/g, '');
@@ -131,3 +141,4 @@
 
 </body>
 </html>
+
