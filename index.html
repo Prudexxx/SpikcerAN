@@ -3,8 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Форма для выбора спикерской.</title>
+<title>Форма обратной связи</title>
 <style>
+
+    #content {
+    display: none; /* Изначально скрыт */
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  /* Стиль для текста */
+
+    #text {
+    font-size: 16px; /* Начальный размер текста */
+    transition: font-size 0.3s;
+    max-width: 100%; /* Ограничение по ширине */
+    word-wrap: break-word; /* Перенос слов при необходимости */
+    overflow-wrap: break-word;
+  }
+
+
+  /* Стиль для кнопки */
+  button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  /* Стиль для бегунка */
+  input[type=range] {
+    vertical-align: middle;
+  }
   body {
     font-family: Arial, sans-serif;
     background-color: #42006e;
@@ -57,12 +87,14 @@
     border-radius: 4px;
     font-size: 1em;
     cursor: pointer;
+     width: 100%;
     transition: background-color 0.3s;
   }
 
   button:hover {
     background-color: #45a049;
   }
+
 
   /* Адаптивность для мобильных устройств */
   @media (max-width: 600px) {
@@ -71,8 +103,7 @@
     }
   }
 </style>
-</head>
-<body>
+
 
 <div class="form-container">
   <h2>Форма для выбора спикерской</h2>
@@ -81,13 +112,124 @@
     <input type="text" id="name" name="name" placeholder="Назар Б" required maxlength="12" />
 
     <label for="phone">Номер спикерской</label>
-    <input type="number" id="phone" name="phone" placeholder="Введите номер"  required />
+    <!-- <input type="number" id="phone" name="phone" placeholder="Введите номер"  required /> -->
+    <input type="number" id="phone"  name="phone" placeholder="Введите номер " required />
 
     <button type="submit" id="submitBtn">Отправить</button>
   </form>
   <p id="status"></p>
+  <!-- Кнопка для открытия/закрытия контента -->
+<button  id="toggleBtn">Спикерские</button><br><br>
+
+<!-- Контент, который будет показываться/скрываться -->
+ <label for="fontSizeRange">Размер текста:</label>
+<input type="range" id="fontSizeRange" min="10" max="40" value="16" />
+
+<div id="content">
+  <p id="text">
+1.Контакт с богом, моя высшая сила. <br>
+2.Духовное пробуждение. <br>
+3.Чудеса в чистоте.<br>
+3.Без честности я не останусь чистым.<br>
+4.Традиции.<br>
+5. Достигнув дна я осознал что я не могу жить по человечески, не с наркотиками, не без них.<br>
+6. Опыт служения.<br>
+7. Как мне удалось работая по программе выстроить здоровую семью.<br>
+8. 1,2,3 шаги фундамент моего выздоровления.<br>
+9. 4 шаг исследование себя с нравственное точки зрения. <br>
+10. Мои изменения себя 4,5шаги анализ.<br>
+11. 6,7 шаги Инвентаризация дефектов характера.<br>
+12. Возмещение ущерба 8,9 шаги<br>
+13. Самоанализ, как мне удается признавать ошибки не допуская старого поведения 10 шаг<br>
+14. Медитация, молитва, размышление как я улучшил свои контакт с богом 11 шаг.<br>
+15. 12 шаг нести весть тем зависимым, которые еще страдают <br>
+16. От отчаяния-К вдохновению.<br>
+17. Почему я остаюсь.<br>
+18. Контакт с самим собой.<br>
+19. Контакт с ВС. <br>
+20. Духовная, но не религиозная программа. <br>
+21. Духовность это практично. <br>
+22. Духовность в действии. <br>
+23. Осознанный контакт. <br>
+24. Мужество.<br>
+25. Что мне даёт сообщество АН. <br>
+26. Дружба. <br>
+27. Семья.<br>
+28. Быть  родителем. <br>
+29. Деньги. <br>
+30. Работа. <br>
+31. Анонимность.<br>
+32. Жить нашими принципами. <br>
+33. Практика капитуляции длиною в жизнь.<br>
+34. Самодовольство. <br>
+35. Быть настоящим.<br>
+36. Служение. <br>
+37. Любовь. <br>
+38. Шаги и их применение в жизни.<br>
+39. Спонсорство: что это для меня?<br>
+40. Служение в АН и повседневной жизни. <br>
+41. Отношения с противоположным полом в чистоте.<br>
+42. Отношения в семье в чистоте (родители- дети).<br>
+43. Моя домашняя группа.<br>
+44. Проживание тяжелых событий, утраты в чистоте.<br>
+45. Деньги и выздоровление.<br>
+46. Проявления зависимости в моей жизни, и как я обретаю здравомыслие.<br>
+47. Позитивные изменения в процессе выздоровления.<br>
+48. Возвращение в сообщество.<br>
+49. Срыв: жизнь до и после.<br>
+50. Служение в БУ.<br>
+51. Служение в ПСО.<br>
+52. Служение в МДА.<br>
+53. Служение в Литком.<br>
+54. Служение в РС.<br>
+55. Служение в МКО.<br>
+56. В чем преимущества чистой жизни для меня?<br>
+57. Обретение здравомыслия.<br>
+58. Как я справляюсь с наваждением и навязчивыми мыслями.<br>
+59. Стабильность в социуме.<br>
+60. Расстановка приоритетов и достижение целей в моей жизни.<br>
+61. Мои отношения с ВС. Как я ее понимаю.<br>
+62. Процесс моей социализации.<br>
+63. Контроль в моей жизни.<br>
+64. Болезнь зависимость.<br>
+65. Группа как инструмент моего выздоровления.<br>
+66. Принцип готовности и непредубежденности в моей жизни.<br>
+67. Что для меня означает "выздоровление".<br>
+68. Мотивация к жизни.</p>
 </div>
 
+<!-- Бегунок для изменения размера текста -->
+
+<script>
+  // Получение элементов
+  const toggleBtn = document.getElementById('toggleBtn');
+  const content = document.getElementById('content');
+  const fontSizeRange = document.getElementById('fontSizeRange');
+  const text = document.getElementById('text');
+
+  // Изначальный статус
+  let isOpen = false;
+
+  // Обработчик для кнопки
+  toggleBtn.addEventListener('click', () => {
+    if (!isOpen) {
+      content.style.display = 'block';
+      toggleBtn.textContent = 'Закрыть';
+    } else {
+      content.style.display = 'none';
+      toggleBtn.textContent = 'Спикерские';
+    }
+    isOpen = !isOpen;
+  });
+
+  // Обработчик для бегунка
+  fontSizeRange.addEventListener('input', () => {
+    const fontSize = fontSizeRange.value;
+    text.style.fontSize = fontSize + 'px';
+  });
+</script>
+
+<!-- Скрипт для отправки формы -->
 <script>
   document.getElementById('feedbackForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Предотвращаем стандартную отправку формы
@@ -96,8 +238,11 @@
 
     // После успешной отправки:
     document.getElementById('status').textContent = 'Форма успешно отправлена!';
-    document.getElementById('submitBtn').disabled = true; // блокируем кнопку
+
+    document.getElementById('submitBtn').remove(); //удаляем кнопку
+    
   });
+
 
   document.getElementById('name').addEventListener('input', function() {
     // Оставляем только буквы и пробелы
@@ -106,9 +251,10 @@
     
 
   document.getElementById('phone').addEventListener('input', function() {
-    if (this.value > 68) {
-      this.value = 68;
+    if (this.value > 68 ) {
+      this.value = 0;
     }
+
   });
 
 
@@ -138,6 +284,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
